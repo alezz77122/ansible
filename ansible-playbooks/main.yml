@@ -1,0 +1,29 @@
+---
+- name: Baseline configuration
+  hosts: Baseline configuration
+  become: true
+  become_method: sudo
+  become_user: root
+  vars:
+    ansible_become_pass: "123" # قم بتعيين كلمة المرور هنا
+  roles:
+    - role: base
+
+- name: apache
+  hosts: apache
+  become: true
+  become_method: sudo
+  become_user: root
+  vars:
+    ansible_become_pass: "123" # قم بتعيين كلمة المرور هنا
+  roles:
+    - role: apache
+#- name: postgres
+#  hosts: local
+#  become: true
+#  become_method: sudo
+#  become_user: root
+#  vars:
+#    ansible_become_pass: "123" # قم بتعيين كلمة المرور هنا
+#  roles:
+#    - role: postgres

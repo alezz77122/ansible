@@ -1,0 +1,6 @@
+---
+# tasks file for postgres
+- name: Install Postgres
+  apt:
+    name: postgresql
+    state: present
